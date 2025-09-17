@@ -128,6 +128,8 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
 1. **Initialize the Cluster**:
     ```bash
     sudo kubeadm init
+    # if you running vm on virstualbox you have specify command like this or it will get you problem >> pointing apiserver ip you assinged to vm
+    sudo kubeadm init --apiserver-advertise-address=10.0.0.120 --pod-network-cidr=10.244.0.0/16
     ```
 
 2. **Set Up Local kubeconfig**:
