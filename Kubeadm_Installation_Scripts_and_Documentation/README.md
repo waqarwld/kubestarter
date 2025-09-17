@@ -85,6 +85,8 @@ This guide outlines the steps needed to set up a Kubernetes cluster using `kubea
     net.ipv4.ip_forward                 = 1
     EOF
 
+    # net.ipv4.ip_forward = 1 was not getting corrected i have to redo separetly .
+
     sudo sysctl --system
     lsmod | grep br_netfilter
     lsmod | grep overlay
